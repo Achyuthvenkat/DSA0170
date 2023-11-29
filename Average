@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+  int n1,n2,n3,total;
+  float avg;
+  
+  cout<<"Enter any three numbers:"<<endl;
+  cin>>n1>>n2>>n3;
+  
+  total=n1+n2+n3;
+  avg=total/3;
+  
+  cout<<"Average= "<<avg<<endl;
+  return 0;
+}
