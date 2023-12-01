@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[10] = {1, 2, 3, 4, 5};
+    int n = 5; 
+    int pos, value;
+
+    cout << "Original array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    cout << "\nEnter the position to insert the element: ";
+    cin >> pos;
+
+    if (pos < 0 || pos > n) {
+        cout << "Invalid position";
+        return 0;
+    }
+
+    cout << "Enter the value to insert: ";
+    cin >> value;
+
+    for (int i = n; i > pos; i--) {
+        arr[i] = arr[i - 1];
+    }
+    arr[pos] = value;
+    n++;
+
+    cout << "Array after insertion: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
