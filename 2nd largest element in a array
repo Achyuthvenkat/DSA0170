@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 40, 30, 20, 50};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int firstMax, secondMax;
+
+    if (arr[0] > arr[1]) {
+        firstMax = arr[0];
+        secondMax = arr[1];
+    } else {
+        firstMax = arr[1];
+        secondMax = arr[0];
+    }
+
+    for (int i = 2; i < n; i++) {
+        if (arr[i] > firstMax) {
+            secondMax = firstMax;
+            firstMax = arr[i];
+        } else if (arr[i] > secondMax && arr[i] != firstMax) {
+            secondMax = arr[i];
+        }
+    }
+
+    cout << "Second largest element in the array: " << secondMax;
+
+    return 0;
+}
